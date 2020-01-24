@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  color: inherit;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: inherit;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.62671rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: inherit;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  color: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h5 {
+  color: inherit;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h6 {
+  color: inherit;
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  margin-left: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+a:active {
+  color: rgba(0, 0, 0, 0.87)
+}

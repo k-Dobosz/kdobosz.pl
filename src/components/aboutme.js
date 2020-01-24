@@ -1,0 +1,53 @@
+import React from "react"
+import styled from "styled-components"
+
+const StyledAboutMe = styled.section`
+  width: 100%;
+  padding: 40px;
+`;
+
+const AboutMeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 0 auto;
+  
+  @media(min-width: 800px) {
+    flex-direction: row;
+  }
+`;
+
+const AboutMeHeader = styled.div`
+  flex-grow: 0;
+  
+  @media(min-width: 800px) {
+    width: 50%;
+  }
+`;
+
+const AboutMeH2 = styled.h2`
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+`;
+
+const AboutMeContent = styled.div`
+  flex-grow: 1;
+`;
+
+const AboutMe = () => (
+  <StyledAboutMe>
+    <AboutMeContainer>
+      <AboutMeHeader>
+        <AboutMeH2>
+          About me
+        </AboutMeH2>
+      </AboutMeHeader>
+      <AboutMeContent>
+        <p>I'm a 17 year old developer, mainly focused on writing backend side of applications. But I'm not afraid of creating both of them. I enjoy creating useful stuff and learing new things.</p>
+      </AboutMeContent>
+    </AboutMeContainer>
+  </StyledAboutMe>
+);
+
+export default AboutMe
