@@ -14,12 +14,20 @@ const StyledHeader = styled.header`
   background-position: 50% 60%;
   height: 70vh;
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  
+  @supports(-webkit-overflow-scrolling: touch) {
+    background-attachment: scroll
+  }
 `;
 
 const StyledH1 = styled.h1`
   margin-top: 22vh;
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.8);
+  
+  @supports(-webkit-overflow-scrolling: touch) {
+    margin-top: 12vh;
+  }
 `;
 
 const StyledH3 = styled.h3`
