@@ -9,6 +9,10 @@ const StyledFooter = styled.footer`
   padding-top: 60px;
   clip-path: polygon(0 45%, 100% 8%, 100% 100%, 0 100%);
   webkit-clip-path: polygon(0 45%, 100% 8%, 100% 100%, 0 100%);
+  
+  @media(prefers-color-scheme: dark) {
+    background-color: #0a0a0a;
+  }
 `;
 
 const Paragraph = styled.p`

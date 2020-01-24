@@ -8,6 +8,10 @@ const StyledSkills = styled.section`
   padding: 50px 40px 40px 40px;
   background-color: #f3f3f3;
   clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  
+  @media(prefers-color-scheme: dark) {
+    background-color: #0a0a0a;
+  }
 `;
 
 const SkillsH2 = styled.h2`
