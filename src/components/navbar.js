@@ -47,11 +47,14 @@ const NavItem = styled.button`
 `;
 
 const MobileNavButton = styled.button`
+  color: rgba(0, 0, 0, 0.8);
   background-color: transparent;
   border: none;
   outline: none;
   height: 3.5rem;
   width: 3.5rem;
+  font-size: 2rem;
+  transform: rotate(90deg);
   
   @media(min-width: 800px) {
     display: none;
@@ -63,6 +66,7 @@ const DropdownMenuItem = styled.button`
   align-items: center;
   margin: auto 15px;
   font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
   background-color: transparent;
   border: none;
   outline: none;
@@ -116,7 +120,7 @@ class Navbar extends React.Component {
               <NavItem onClick={() => scrollTo('#skills')}>Skills</NavItem>
               <NavItem onClick={() => scrollTo('#projects')}>Projects</NavItem>
               <NavItem href="">Resume</NavItem>
-              <MobileNavButton onClick={this.toggle}>{this.state.isActive ? 'true' : 'false'}</MobileNavButton>
+              <MobileNavButton onClick={this.toggle}></MobileNavButton>
             </Nav>
           </NavContainer>
         </Navigation>
