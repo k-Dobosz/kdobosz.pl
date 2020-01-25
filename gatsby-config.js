@@ -7,6 +7,14 @@ module.exports = {
   },
   pathPrefix: "/kdobosz.pl",
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-154900780-1",
+        head: false,
+        anonymize: true
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
