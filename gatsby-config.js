@@ -28,6 +28,7 @@ module.exports = {
         display: `browser`,
       },
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-smoothscroll`
   ],
 }

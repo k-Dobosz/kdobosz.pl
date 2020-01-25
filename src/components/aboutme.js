@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledAboutMe = styled.section`
+const AboutMeSection = styled.section`
   width: 100%;
   padding: 40px;
 `;
@@ -33,10 +33,11 @@ const AboutMeH2 = styled.h2`
 
 const AboutMeContent = styled.div`
   flex-grow: 1;
+  text-align: justify;
 `;
 
 const AboutMe = () => (
-  <StyledAboutMe>
+  <AboutMeSection id="about-me">
     <AboutMeContainer>
       <AboutMeHeader>
         <AboutMeH2>
@@ -47,7 +48,7 @@ const AboutMe = () => (
         <p>I'm a 17 year old developer, mainly focused on writing backend side of applications. But I'm not afraid of creating both of them. I enjoy creating useful stuff and learing new things.</p>
       </AboutMeContent>
     </AboutMeContainer>
-  </StyledAboutMe>
+  </AboutMeSection>
 );
 
 export default AboutMe

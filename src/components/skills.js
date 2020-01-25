@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledSkills = styled.section`
+const SkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -22,8 +22,12 @@ const SkillsH2 = styled.h2`
 
 const SkillsContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%
+  flex-direction: column;
+  width: 100%;
+  
+  @media(min-width: 800px) {
+    flex-direction: row;
+  }
 `;
 
 const SkillsColumn = styled.div`
@@ -39,7 +43,7 @@ const SkillsList = styled.ul`
 `;
 
 const Skills = () => (
-  <StyledSkills>
+  <SkillsSection id="skills">
     <SkillsH2>
       Skills
     </SkillsH2>
@@ -68,7 +72,7 @@ const Skills = () => (
         </SkillsList>
       </SkillsColumn>
     </SkillsContainer>
-  </StyledSkills>
+  </SkillsSection>
 );
 
 export default Skills

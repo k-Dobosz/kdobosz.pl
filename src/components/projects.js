@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledProjects = styled.section`
+const ProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -17,14 +17,13 @@ const ProjectsH2 = styled.h2`
 
 
 const Projects = () => (
-  <StyledProjects>
+  <ProjectsSection id="projects">
     <ProjectsH2>
       Projects
     </ProjectsH2>
     <div>
-      <img src="https://via.placeholder.com/384x216" alt="Project"/>
     </div>
-  </StyledProjects>
+  </ProjectsSection>
 );
 
 export default Projects
