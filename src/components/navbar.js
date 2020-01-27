@@ -46,7 +46,34 @@ const NavItem = styled.button`
   }
 `;
 
+
+const NavIcon = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 4px;
+  width: 85%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 4px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 10px;
+  }
+`;
+
 const MobileNavButton = styled.button`
+  display: flex;
   color: rgba(0, 0, 0, 0.8);
   background-color: transparent;
   border: none;
@@ -54,10 +81,27 @@ const MobileNavButton = styled.button`
   height: 3.5rem;
   width: 3.5rem;
   font-size: 2rem;
-  transform: rotate(90deg);
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
   
   @media(min-width: 800px) {
     display: none;
+  }
+
+  ${NavIcon} {
+    background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
+    transition: background-color 1s;
+
+    &:before {
+      background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
+      transition: background-color 1s;
+    }
+
+    &:after {
+      background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
+      transition: background-color 1s;
+    }
   }
 `;
 
@@ -81,12 +125,12 @@ const DropdownMenu = styled.div`
   width: 100%;
   background-color: ${props => (props.active ? '#ffffff': 'transparent')};
   z-index: ${props => (props.active ? 1: 0)};
-  transition: top 0.7s, background-color 1s, z-index 1s;
+  transition: top 1s, background-color 1s, z-index 1s;
   
   ${DropdownMenuItem} {
     // display: ${props => (props.active ? "flex" : "none")};
     height: ${props => (props.active ? '2.5rem': '0')};
-    transition: height 0.7s;
+    transition: height 1s;
   }
   
   @media(min-width: 800px) {
@@ -120,7 +164,7 @@ class Navbar extends React.Component {
               <NavItem onClick={() => scrollTo('#skills')}>Skills</NavItem>
               <NavItem onClick={() => scrollTo('#projects')}>Projects</NavItem>
               <NavItem href="">Resume</NavItem>
-              <MobileNavButton onClick={this.toggle}></MobileNavButton>
+              <MobileNavButton onClick={this.toggle} active={this.state.isActive}><NavIcon/></MobileNavButton>
             </Nav>
           </NavContainer>
         </Navigation>
