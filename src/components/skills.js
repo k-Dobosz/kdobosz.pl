@@ -44,31 +44,31 @@ const SkillsList = styled.ul`
 
 const Skills = () => (
   <SkillsSection id="skills">
-    <SkillsH2>
+    <SkillsH2 data-sal="slide-up" data-sal-duration="1000">
       Skills
     </SkillsH2>
     <SkillsContainer>
       <SkillsColumn>
-        <SkillsH3>Languages</SkillsH3>
+        <SkillsH3 data-sal="slide-up" data-sal-duration="1000">Languages</SkillsH3>
         <SkillsList>
-          <li>Javascript</li>
-          <li>Python</li>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li data-sal="slide-up" data-sal-duration="1000">Javascript</li>
+          <li data-sal="slide-up" data-sal-duration="1000">Python</li>
+          <li data-sal="slide-up" data-sal-duration="1000">HTML</li>
+          <li data-sal="slide-up" data-sal-duration="1000">CSS</li>
         </SkillsList>
       </SkillsColumn>
       <SkillsColumn>
-        <SkillsH3>Tools</SkillsH3>
+        <SkillsH3 data-sal="slide-up" data-sal-duration="1000">Tools</SkillsH3>
         <SkillsList>
-          <li>Git</li>
-          <li>Linux</li>
+          <li data-sal="slide-up" data-sal-duration="1000">Git</li>
+          <li data-sal="slide-up" data-sal-duration="1000">Linux</li>
         </SkillsList>
       </SkillsColumn>
       <SkillsColumn>
-        <SkillsH3>Frameworks</SkillsH3>
+        <SkillsH3 data-sal="slide-up" data-sal-duration="1000">Frameworks</SkillsH3>
         <SkillsList>
-          <li>React</li>
-          <li>Gatsby</li>
+          <li data-sal="slide-up" data-sal-duration="1000">React</li>
+          <li data-sal="slide-up" data-sal-duration="1000">Gatsby</li>
         </SkillsList>
       </SkillsColumn>
     </SkillsContainer>

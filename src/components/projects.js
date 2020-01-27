@@ -18,7 +18,7 @@ const ProjectsH2 = styled.h2`
 
 const Projects = () => (
   <ProjectsSection id="projects">
-    <ProjectsH2>
+    <ProjectsH2 data-sal="slide-up" data-sal-duration="1000">
       Projects
     </ProjectsH2>
     <div>

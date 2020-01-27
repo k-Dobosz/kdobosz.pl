@@ -40,11 +40,11 @@ const AboutMe = () => (
   <AboutMeSection id="about-me">
     <AboutMeContainer>
       <AboutMeHeader>
-        <AboutMeH2>
+        <AboutMeH2 data-sal="slide-up" data-sal-duration="1000">
           About me
         </AboutMeH2>
       </AboutMeHeader>
-      <AboutMeContent>
+      <AboutMeContent data-sal="slide-up" data-sal-duration="1000">
         <p>I'm a 17 year old developer, mainly focused on writing backend side of applications. But I'm not afraid of creating both of them. I enjoy creating useful stuff and learing new things.</p>
       </AboutMeContent>
     </AboutMeContainer>

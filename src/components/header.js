@@ -37,10 +37,10 @@ const StyledH3 = styled.h3`
 
 const Header = () => (
   <StyledHeader>
-    <StyledH1>
+    <StyledH1 data-sal="slide-up" data-sal-duration="1000">
       Hi, I'm Konrad
     </StyledH1>
-    <StyledH3>
+    <StyledH3 data-sal="slide-up" data-sal-duration="1000">
       I'm web developer
     </StyledH3>
   </StyledHeader>

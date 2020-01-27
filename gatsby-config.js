@@ -37,6 +37,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 1,
+        once: true,
+        disable: false,
+
+        selector: '[data-sal]',
+        animateClassName: 'sal-animate',
+        disabledClassName: 'sal-disabled',
+        rootMargin: '0% 50%',
+        enterEventName: 'sal:in',
+        exitEventName: 'sal:out',
+      }
+    }
   ],
 }
