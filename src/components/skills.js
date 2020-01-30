@@ -7,6 +7,7 @@ const SkillsSection = styled.section`
   width: 100%;
   padding: 50px 40px 40px 40px;
   background-color: #f3f3f3;
+  align-items: center;
   clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
   
   @media(prefers-color-scheme: dark) {
@@ -23,7 +24,7 @@ const SkillsH2 = styled.h2`
 const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 960px;
   
   @media(min-width: 800px) {
     flex-direction: row;
