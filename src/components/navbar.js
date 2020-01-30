@@ -9,7 +9,7 @@ const Navigation = styled.div`
   width: 100%;
   height: 3.5rem;
   background-color: ${props => (props.active ? 'white' : 'transparent')};;
-  transition: background-color 1s;
+  transition: background-color .4s;
   z-index: 2;
 `;
 
@@ -91,16 +91,16 @@ const MobileNavButton = styled.button`
 
   ${NavIcon} {
     background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
-    transition: background-color 1s;
+    transition: .4s;
 
     &:before {
       background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
-      transition: background-color 1s;
+      transition: .4s;
     }
 
     &:after {
       background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
-      transition: background-color 1s;
+      transition: .4s;
     }
   }
 `;
@@ -114,6 +114,11 @@ const DropdownMenuItem = styled.button`
   background-color: transparent;
   border: none;
   outline: none;
+  
+  &:hover {
+    color: #E9C7D3;
+    transition: color .2s !important;
+  }
 `;
 
 const DropdownMenu = styled.div`
@@ -125,12 +130,11 @@ const DropdownMenu = styled.div`
   width: 100%;
   background-color: ${props => (props.active ? '#ffffff': 'transparent')};
   z-index: ${props => (props.active ? 1: 0)};
-  transition: top 1s, background-color 1s, z-index 1s;
+  transition: .4s;
   
   ${DropdownMenuItem} {
-    // display: ${props => (props.active ? "flex" : "none")};
     height: ${props => (props.active ? '2.5rem': '0')};
-    transition: height 1s;
+    transition: .4s;
   }
   
   @media(min-width: 800px) {
