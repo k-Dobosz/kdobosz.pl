@@ -41,6 +41,10 @@ const NavItem = styled.button`
   outline: none;
   font-size: 1rem;
   
+  &:hover {
+    cursor: pointer;
+  }
+  
   @media(max-width: 800px) {
     display: none;
   }
@@ -85,6 +89,10 @@ const MobileNavButton = styled.button`
   justify-content: center;
   padding: 5px;
   
+   &:hover {
+    cursor: pointer;
+  }
+  
   @media(min-width: 800px) {
     display: none;
   }
@@ -116,6 +124,7 @@ const DropdownMenuItem = styled.button`
   outline: none;
   
   &:hover {
+    cursor: pointer;
     color: #E9C7D3;
     transition: color .2s !important;
   }
@@ -167,7 +176,6 @@ class Navbar extends React.Component {
               <NavItem onClick={() => scrollTo('#about-me')}>About me</NavItem>
               <NavItem onClick={() => scrollTo('#skills')}>Skills</NavItem>
               <NavItem onClick={() => scrollTo('#projects')}>Projects</NavItem>
-              <NavItem href="">Resume</NavItem>
               <MobileNavButton onClick={this.toggle} active={this.state.isActive}><NavIcon/></MobileNavButton>
             </Nav>
           </NavContainer>
