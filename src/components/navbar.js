@@ -33,12 +33,9 @@ const Nav = styled.nav`
   margin: auto 0 auto;
 `;
 
-const NavItem = styled.button`
+const NavItem = styled.a`
   color: rgba(0, 0, 0, 0.8);
   margin: 0 10px 0 10px;
-  background-color: transparent;
-  border: none;
-  outline: none;
   font-size: 1rem;
   
   &:hover {
@@ -113,15 +110,12 @@ const MobileNavButton = styled.button`
   }
 `;
 
-const DropdownMenuItem = styled.button`
+const DropdownMenuItem = styled.a`
   display: flex;
   align-items: center;
   margin: auto 15px;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.8);
-  background-color: transparent;
-  border: none;
-  outline: none;
   
   &:hover {
     cursor: pointer;
