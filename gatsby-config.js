@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `kDobosz`,
-    description: `Konrad Dobosz`,
+    description: `Konrad Dobosz is a web developer who lives in Poland, specialized in writing browser applications.`,
     keywords: `Konrad Dobosz, Konrad, Dobosz, kdobosz, Developer, HTML, CSS, JS, Javascript, NodeJS, Python, React, Gatsby`,
     author: `Konrad Dobosz`,
   },
