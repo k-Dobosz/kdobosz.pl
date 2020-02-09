@@ -54,7 +54,8 @@ const NavIcon = styled.div`
   align-items: center;
   position: relative;
   height: 4px;
-  width: 85%;
+  width: 80%;
+  border-radius: 2px;
 
   &:before {
     content: '';
@@ -62,6 +63,7 @@ const NavIcon = styled.div`
     top: -10px;
     width: 100%;
     height: 4px;
+    border-radius: 2px;
   }
 
   &:after {
@@ -70,12 +72,12 @@ const NavIcon = styled.div`
     width: 100%;
     height: 4px;
     top: 10px;
+    border-radius: 2px;
   }
 `;
 
 const MobileNavButton = styled.button`
   display: flex;
-  color: rgba(0, 0, 0, 0.8);
   background-color: transparent;
   border: none;
   outline: none;
@@ -95,17 +97,23 @@ const MobileNavButton = styled.button`
   }
 
   ${NavIcon} {
-    background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
-    transition: .4s;
+    background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.5)')};
+    transform: ${props => (props.active ? 'rotate(45deg)' : '')};
+    transition: .2s;
 
     &:before {
-      background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
-      transition: .4s;
+      background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0)' : 'rgba(0, 0, 0, 0.5)')};
+      // top: ${props => (props.active ? '0px' : '10px')};
+      transform: ${props => (props.active ? 'translateY(10px)' : '')};
+      opacity: 1;
+      transition: .2s;
     }
 
     &:after {
-      background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.5)')};
-      transition: .4s;
+      background-color: ${props => (props.active ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.5)')};
+      // top: ${props => (props.active ? '0px' : '-10px')};
+      transform: ${props => (props.active ? 'translateY(-10px) rotate(90deg)' : '')};
+      transition: .2s;
     }
   }
 `;
