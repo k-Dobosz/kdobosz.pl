@@ -5,9 +5,9 @@ const AboutMeSection = styled.section`
   width: 100%;
   padding: 80px 40px;
   
-  @media(max-width: 800px) {
-    padding: 40px 40px;
-  }  
+  @supports(-webkit-overflow-scrolling: touch) {
+    padding: 0 40px 80px 40px;
+  }
 `;
 
 const AboutMeContainer = styled.div`
