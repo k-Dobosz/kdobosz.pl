@@ -17,6 +17,10 @@ const DesktopMenu = styled.div`
   padding: 1rem 4rem;
   transition: background-color .4s;
   z-index: 2;
+  
+  @media(max-width: 800px) {
+    padding: 1rem 2rem;
+  }  
 `;
 
 const Logo = styled.h1`

@@ -6,12 +6,8 @@ const SkillsSection = styled.section`
   flex-direction: column;
   width: 100%;
   padding: 60px 40px;
-  background-color: #f3f3f3;
+  background-color: #0a0a0a;
   align-items: center;
-  
-  @media(prefers-color-scheme: dark) {
-    background-color: #0a0a0a;
-  }
 `;
 
 const SkillsH2 = styled.h2`

@@ -16,10 +16,6 @@ const StyledHeader = styled.header`
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
     z-index: 1;
   }
-  
-  @supports(-webkit-overflow-scrolling: touch) {
-    background-attachment: scroll
-  }
 `;
 
 const StyledH1 = styled.h1`
@@ -28,6 +24,11 @@ const StyledH1 = styled.h1`
   font-size: 3.6rem;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
+  
+  @media(max-width: 800px) {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+  }  
 `;
 
 const StyledH3 = styled.h3`
@@ -35,6 +36,11 @@ const StyledH3 = styled.h3`
   font-size: 2.2rem;
   color: rgba(255, 255, 255, 0.6);
   z-index: 1;
+  
+  @media(max-width: 800px) {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+  }  
 `;
 
 const Header = () => {

@@ -4,6 +4,10 @@ import styled from "styled-components"
 const AboutMeSection = styled.section`
   width: 100%;
   padding: 80px 40px;
+  
+  @media(max-width: 800px) {
+    padding: 40px 40px;
+  }  
 `;
 
 const AboutMeContainer = styled.div`
