@@ -6,9 +6,16 @@ import Img from 'gatsby-image'
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
-  text-align: center;
-  height: 70vh;
-  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  height: 100vh;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;  
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+  }
   
   @supports(-webkit-overflow-scrolling: touch) {
     background-attachment: scroll
@@ -16,26 +23,24 @@ const StyledHeader = styled.header`
 `;
 
 const StyledH1 = styled.h1`
-  margin-top: 22vh;
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.8);
-  z-index: 0;
-  
-  @supports(-webkit-overflow-scrolling: touch) {
-    margin-top: 12vh;
-  }
+  margin-top: 40vh;
+  margin-left: 4rem;
+  font-size: 3.6rem;
+  color: rgba(255, 255, 255, 1);
+  z-index: 1;
 `;
 
 const StyledH3 = styled.h3`
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.4);
-  z-index: 0;
+  margin-left: 4rem;
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
 `;
 
 const Header = () => {
   const data = useStaticQuery(graphql`
   {
-    placeholderImage: file(relativePath: {eq: "bg.png"}) {
+    placeholderImage: file(relativePath: {eq: "bg.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 4000, maxHeight: 2000, fit: COVER) {
           aspectRatio
@@ -52,8 +57,7 @@ const Header = () => {
     <StyledHeader>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        imgStyle={{ position: `fixed` }}
-        style={{ height: `0`, width: `0` }}
+        style={{ position: `initial`, height: `0`, width: `0` }}
       />
       <StyledH1 data-sal="slide-up" data-sal-duration="1000">
         Hi, I'm Konrad

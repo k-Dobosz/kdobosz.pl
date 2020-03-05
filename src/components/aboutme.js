@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const AboutMeSection = styled.section`
   width: 100%;
-  padding: 40px;
+  padding: 80px 40px;
 `;
 
 const AboutMeContainer = styled.div`

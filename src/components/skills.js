@@ -5,10 +5,9 @@ const SkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 50px 40px 40px 40px;
+  padding: 60px 40px;
   background-color: #f3f3f3;
   align-items: center;
-  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
   
   @media(prefers-color-scheme: dark) {
     background-color: #0a0a0a;

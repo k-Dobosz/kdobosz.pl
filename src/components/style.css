@@ -1,7 +1,3 @@
-:root {
-  color-scheme: light dark;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,15 +7,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: rgba(0, 0, 0, 0.8);
-
-}
-
-@media(prefers-color-scheme: dark) {
-  body {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #000000
-  }
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #000000;
 }
 
 h1 {
@@ -92,9 +81,10 @@ a:visited {
 }
 
 a:hover {
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.5);
+  transition: color .2s;
 }
 
 a:active {
-  color: rgba(0, 0, 0, 0.87)
+  color: rgba(255, 255, 255, 0.87)
 }

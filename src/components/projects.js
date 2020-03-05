@@ -5,8 +5,7 @@ const ProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 50px 40px 40px 40px;
-  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  padding: 60px 40px;
 `;
 
 const ProjectsH2 = styled.h2`

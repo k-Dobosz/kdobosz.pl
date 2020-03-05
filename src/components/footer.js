@@ -5,20 +5,13 @@ const StyledFooter = styled.footer`
   display: flex;
   flexDirection: column;
   width: 100%;
-  background-color: #f3f3f3;
-  padding-top: 60px;
-  clip-path: polygon(0 45%, 100% 8%, 100% 100%, 0 100%);
-  webkit-clip-path: polygon(0 45%, 100% 8%, 100% 100%, 0 100%);
-  
-  @media(prefers-color-scheme: dark) {
-    background-color: #0a0a0a;
-  }
+  background-color: #0a0a0a;
+  padding: 30px;
 `;
 
 const Paragraph = styled.p`
   width: 100%;
   text-align: center;
-  margin-bottom: 24px;
   font-size: 0.9rem;
   line-height: 1.5;
   color: #4a4a4a;
