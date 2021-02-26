@@ -5,7 +5,6 @@ const StyledFooter = styled.footer`
   display: flex;
   flexDirection: column;
   width: 100%;
-  background-color: #0a0a0a;
   padding: 30px;
 `;
 
@@ -14,7 +13,6 @@ const Paragraph = styled.p`
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #4a4a4a;
 `;
 
 const Footer = () => (

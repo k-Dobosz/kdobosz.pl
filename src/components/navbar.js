@@ -27,6 +27,7 @@ const Logo = styled.h1`
   color: ${props => (props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   font-size: 1.5rem;
   margin: 1rem 0;
+  font-weight: 300;
 `;
 
 const Nav = styled.nav`
@@ -140,6 +141,7 @@ const MobileMenu = styled.div`
   position: absolute;
   top: ${props => (props.active ? '6rem': 0)};
   left: 0;
+  padding-bottom: 1.2rem;
   width: 100%;
   background-color: ${props => (props.active ? '#ffffff': 'transparent')};
   z-index: ${props => (props.active ? 3 : 0)};
