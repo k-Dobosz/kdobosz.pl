@@ -6,6 +6,9 @@ const ProjectsSection = styled.section`
   flex-direction: column;
   width: 100%;
   padding: 60px 40px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0 0 20px 20px;
 `;
 
 const ProjectsH2 = styled.h2`

@@ -17,7 +17,7 @@ const Layout = () => {
       <main>
         <SEO/>
         <AboutMe/>
-        <Skills/>
+        {/*<Skills/>*/}
         <Projects/>
       </main>
       <Footer/>

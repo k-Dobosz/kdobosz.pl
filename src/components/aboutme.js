@@ -4,6 +4,8 @@ import styled from "styled-components"
 const AboutMeSection = styled.section`
   width: 100%;
   padding: 80px 40px;
+  background-color: #fff;
+  color: #000;
   
   @supports(-webkit-overflow-scrolling: touch) {
     padding: 0 40px 80px 40px;
