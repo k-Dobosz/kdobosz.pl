@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
     position: absolute;
     height: 100vh;
     width: 100%;  
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 1));
     z-index: 1;
   }
 `;
