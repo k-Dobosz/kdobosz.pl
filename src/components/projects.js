@@ -1,31 +1,22 @@
 import React from "react"
 import styled from "styled-components"
-
-const ProjectsSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 60px 40px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 0 0 20px 20px;
-`;
+import { Container, Section, Separator } from "./style"
 
 const ProjectsH2 = styled.h2`
   width: 100%;
   font-size: 2rem;
-  text-align: center;
+  margin-bottom: 0.5rem;
 `;
 
-
 const Projects = () => (
-  <ProjectsSection id="projects">
-    <ProjectsH2 data-sal="slide-up" data-sal-duration="1000">
-      Projects
-    </ProjectsH2>
-    <div>
-    </div>
-  </ProjectsSection>
+  <Section id="projects">
+      <Container>
+          <ProjectsH2 data-sal="slide-up" data-sal-duration="1000">
+              Projects
+          </ProjectsH2>
+          <Separator data-sal="slide-up" data-sal-duration="1000"/>
+      </Container>
+  </Section>
 );
 
 export default Projects
