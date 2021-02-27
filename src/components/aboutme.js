@@ -34,7 +34,7 @@ const AboutMe = () => (
         <Separator data-sal="slide-up" data-sal-duration="1000"/>
       </AboutMeHeader>
       <AboutMeContent data-sal="slide-up" data-sal-duration="1000">
-        <p>I'm a 17 year old developer, mainly focused on writing backend side of applications. But I'm not afraid of creating both of them. I enjoy creating useful stuff and learing new things.</p>
+        <p>I'm an 18 year old developer, mainly focused on writing backend side of applications. But I'm not afraid of creating both of them. I enjoy creating useful stuff and learing new things.</p>
       </AboutMeContent>
     </Container>
   </Section>
