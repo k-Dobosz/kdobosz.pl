@@ -34,7 +34,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#f3f3f3`,
         display: `browser`,
-        icon: `icon.png`
+        icon: `${__dirname}/src/images/icon.png`
       },
     },
     `gatsby-plugin-styled-components`,

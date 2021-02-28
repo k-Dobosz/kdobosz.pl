@@ -30,7 +30,7 @@ const StyledH1 = styled.h1`
   }  
 `;
 
-const StyledH3 = styled.h3`
+const StyledH2 = styled.h2`
   font-size: 2.2rem;
   color: rgba(255, 255, 255, 0.6);
   z-index: 1;
@@ -66,9 +66,9 @@ const Header = () => {
           <StyledH1 data-sal="slide-up" data-sal-duration="1000">
               Hi, I'm Konrad
           </StyledH1>
-          <StyledH3 data-sal="slide-up" data-sal-duration="1000">
+          <StyledH2 data-sal="slide-up" data-sal-duration="1000">
               I'm web developer
-          </StyledH3>
+          </StyledH2>
       </Container>
 
     </StyledHeader>

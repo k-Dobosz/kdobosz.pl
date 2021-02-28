@@ -184,7 +184,7 @@ class Navbar extends React.Component {
             <Nav>
               <NavItem onClick={() => { scrollTo('#about-me'); this.toggle(); }}>About me</NavItem>
               <NavItem>Contact</NavItem>
-              <MobileNavButton onClick={this.toggle} active={this.state.isActive}><NavButtonIcon/></MobileNavButton>
+              <MobileNavButton onClick={this.toggle} active={this.state.isActive} aria-label="Mobile navigation button"><NavButtonIcon/></MobileNavButton>
             </Nav>
             <MobileNav active={this.state.isActive}>
               <MobileMenuItem onClick={() => { scrollTo('#about-me'); this.toggle(); }}>About me</MobileMenuItem>
