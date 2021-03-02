@@ -83,9 +83,9 @@ a:visited {
 
 a:hover {
   color: rgba(255, 255, 255, 0.5);
-  transition: color .2s;
+  transition: color 0.2s;
 }
 
 a:active {
-  color: rgba(255, 255, 255, 0.87)
+  color: rgba(255, 255, 255, 0.87);
 }
