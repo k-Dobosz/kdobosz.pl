@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Container } from './style'
 
 const StyledHeader = styled.header`
@@ -41,28 +41,24 @@ const StyledH2 = styled.h2`
 `
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    {
-      placeholderImage: file(relativePath: { eq: "bg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, maxHeight: 1080, fit: COVER) {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  placeholderImage: file(relativePath: {eq: "bg.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(
+        placeholder: BLURRED
+        transformOptions: {fit: COVER}
+        layout: FULL_WIDTH
+      )
     }
-  `)
+  }
+}
+`)
 
   return (
     <StyledHeader>
-      <Img
-        fluid={data.placeholderImage.childImageSharp.fluid}
-        style={{ position: `initial`, height: `0`, width: `0` }}
-      />
+      <GatsbyImage
+        image={data.placeholderImage.childImageSharp.gatsbyImageData}
+        style={{ position: `initial`, height: `0`, width: `0` }} />
       <Container>
         <StyledH1 data-sal="slide-up" data-sal-duration="1000">
           Hi, I'm Konrad
@@ -72,7 +68,7 @@ const Header = () => {
         </StyledH2>
       </Container>
     </StyledHeader>
-  )
+  );
 }
 
 export default Header

@@ -62,7 +62,7 @@ const NavItem = styled.a`
   }
 `
 
-const NavButtonIcon = styled.div`
+const NavButtonIcon = styled.span`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,10 +138,7 @@ const MobileNavButton = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0.3px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   @media (min-width: 800px) {
     display: none;
