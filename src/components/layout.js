@@ -5,8 +5,8 @@ import Navbar from './navbar'
 import Header from './header'
 import SEO from './seo'
 import AboutMe from './aboutme'
-import Skills from './skills'
 import Projects from './projects'
+import Contact from "./contact";
 import Footer from './footer'
 
 const Layout = () => {
@@ -18,6 +18,7 @@ const Layout = () => {
         <SEO />
         <AboutMe />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </>
