@@ -28,6 +28,10 @@ const StyledH1 = styled.h1`
   @media (max-width: 800px) {
     font-size: 2.5rem;
   }
+  
+  @media (max-width: 450px) {
+    font-size: 2rem;
+  }
 `
 
 const StyledH2 = styled.h2`
@@ -58,6 +62,7 @@ const Header = () => {
     <StyledHeader>
       <GatsbyImage
         image={data.placeholderImage.childImageSharp.gatsbyImageData}
+        alt="Header background image"
         style={{ position: `initial`, height: `0`, width: `0` }} />
       <Container>
         <StyledH1 data-sal="slide-up" data-sal-duration="1000">
