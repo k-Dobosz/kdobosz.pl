@@ -95,19 +95,20 @@ const Contact = () => {
         <Separator data-sal="slide-up" data-sal-duration="1000" />
         <ContactContent>
           <ContactForm name="contact" data-netlify="true">
-            <Label>
+            <input type="hidden" name="form-name" value="contact" />
+            <Label data-sal="slide-up" data-sal-duration="1000">
               Name
               <Input type="text" name="name" placeholder="Your name" required/>
             </Label>
-            <Label>
+            <Label data-sal="slide-up" data-sal-duration="1000">
               Email
               <Input type="email" name="email" placeholder="Email" required/>
             </Label>
-            <Label>
+            <Label data-sal="slide-up" data-sal-duration="1000">
               Message
               <Textarea name="message" placeholder="Message" required/>
             </Label>
-            <Button type="submit">Send</Button>
+            <Button type="submit" data-sal="slide-up" data-sal-duration="1000">Send</Button>
           </ContactForm>
         </ContactContent>
       </Container>

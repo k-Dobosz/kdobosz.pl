@@ -94,7 +94,7 @@ const Projects = () => (
       </ProjectsH2>
       <Separator data-sal="slide-up" data-sal-duration="1000" />
       <ProjectContainer>
-        <Project>
+        <Project data-sal="slide-up" data-sal-duration="1000">
           <h4>Url shortener app</h4>
           <Description>
             Simple app written in Typescript that allows users to shorten their url. Used technologies: NodeJS, Typescript, MongoDb, Express and Jest
