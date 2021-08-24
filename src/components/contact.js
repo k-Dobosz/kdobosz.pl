@@ -87,7 +87,7 @@ const ContactForm = styled.form`
 
 const Contact = () => {
   return (
-    <Section id="projects">
+    <Section id="contact">
       <Container>
         <ContactH2 data-sal="slide-up" data-sal-duration="1000">
           Contact

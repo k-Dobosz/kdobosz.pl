@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import styled from 'styled-components'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import { Container } from './style'
@@ -168,62 +168,52 @@ const MobileNavButton = styled.button`
   }
 `
 
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { isActive: false }
-  }
+const Navbar = () => {
+  const [isActive, setIsActive] = useState(false)
 
-  toggle = () => {
-    this.setState(prev => ({
-      isActive: !prev.isActive
-    }))
-  }
-
-  render() {
-    return (
-      <Navigation active={this.state.isActive}>
-        <ContainerRow>
-          <Logo active={this.state.isActive}>kDobosz</Logo>
-          <Nav>
-            <NavItem
-              onClick={() => {
-                scrollTo('#about-me')
-                this.toggle()
-              }}
-            >
-              About me
-            </NavItem>
-            <NavItem>Contact</NavItem>
-            <MobileNavButton
-              onClick={this.toggle}
-              active={this.state.isActive}
-              aria-label="Mobile navigation button"
-            >
-              <NavButtonIcon />
-            </MobileNavButton>
-          </Nav>
-          <MobileNav active={this.state.isActive}>
-            <MobileMenuItem
-              onClick={() => {
-                scrollTo('#about-me')
-                this.toggle()
-              }}
-            >
-              About me
-            </MobileMenuItem>
-            <MobileMenuItem
-              onClick={() => {
-                this.toggle()
-              }}
-            >
-              Contact
-            </MobileMenuItem>
-          </MobileNav>
-        </ContainerRow>
-      </Navigation>
-    )
-  }
+  return (
+    <Navigation active={isActive}>
+      <ContainerRow>
+        <Logo active={isActive}>kDobosz</Logo>
+        <Nav>
+          <NavItem
+            onClick={() => {
+              scrollTo('#about-me')
+              setIsActive(!isActive)
+            }}
+          >
+            About me
+          </NavItem>
+          <NavItem>Contact</NavItem>
+          <MobileNavButton
+            onClick={() => setIsActive(!isActive)}
+            active={isActive}
+            aria-label="Mobile navigation button"
+          >
+            <NavButtonIcon />
+          </MobileNavButton>
+        </Nav>
+        <MobileNav active={isActive}>
+          <MobileMenuItem
+            onClick={() => {
+              scrollTo('#about-me')
+              setIsActive(!isActive)
+            }}
+          >
+            About me
+          </MobileMenuItem>
+          <MobileMenuItem
+            onClick={() => {
+              scrollTo('#contact')
+              setIsActive(!isActive)
+            }}
+          >
+            Contact
+          </MobileMenuItem>
+        </MobileNav>
+      </ContainerRow>
+    </Navigation>
+  )
 }
 
 export default Navbar
