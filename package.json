@@ -17,6 +17,7 @@
     "gatsby-plugin-smoothscroll": "^1.0.4",
     "gatsby-plugin-styled-components": "^4.12.0",
     "gatsby-source-filesystem": "^3.12.0",
+    "gatsby-transformer-remark": "^4.9.0",
     "gatsby-transformer-sharp": "^3.12.0",
     "polished": "^4.1.3",
     "prop-types": "^15.7.2",

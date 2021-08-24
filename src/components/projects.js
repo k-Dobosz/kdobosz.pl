@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Section, Separator } from './style'
+import { graphql, StaticQuery } from "gatsby";
 
 const ProjectsH2 = styled.h2`
   width: 100%;
@@ -94,16 +95,36 @@ const Projects = () => (
       </ProjectsH2>
       <Separator data-sal="slide-up" data-sal-duration="1000" />
       <ProjectContainer>
-        <Project data-sal="slide-up" data-sal-duration="1000">
-          <h4>Url shortener app</h4>
-          <Description>
-            Simple app written in Typescript that allows users to shorten their url. Used technologies: NodeJS, Typescript, MongoDb, Express and Jest
-          </Description>
-          <Buttons>
-            <ButtonDemo target="_blank" rel="noopener noreferrer" href="https://url-shortener-kdobosz.herokuapp.com/">View project</ButtonDemo>
-            <ButtonCode target="_blank" rel="noopener noreferrer" href="https://github.com/k-Dobosz/url-shortener">GitHub</ButtonCode>
-          </Buttons>
-        </Project>
+        <StaticQuery
+          query={graphql`
+            query ProjectQuery {
+              allMarkdownRemark(sort: {fields: id, order: ASC}) {
+                edges {
+                  node {
+                    id
+                    frontmatter {
+                      name
+                      demo_url
+                      code_url
+                    }
+                    excerpt
+                  }
+                }
+              }
+            }
+          `}
+          render={data => {
+            return data.allMarkdownRemark.edges.map(edge => (
+              <Project data-sal="slide-up" data-sal-duration="1000" key={edge.node.id}>
+                <h4>{ edge.node.frontmatter.name }</h4>
+                <Description>{ edge.node.excerpt }</Description>
+                <Buttons>
+                  <ButtonDemo target="_blank" rel="noopener noreferrer" href={edge.node.frontmatter.demo_url}>View project</ButtonDemo>
+                  <ButtonCode target="_blank" rel="noopener noreferrer" href={edge.node.frontmatter.code_url}>GitHub</ButtonCode>
+                </Buttons>
+              </Project>
+            ))
+          }}/>
       </ProjectContainer>
     </Container>
   </Section>
