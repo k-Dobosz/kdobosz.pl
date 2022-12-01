@@ -98,7 +98,7 @@ const Projects = () => (
         <StaticQuery
           query={graphql`
             query ProjectQuery {
-              allMarkdownRemark(sort: {fields: id, order: ASC}) {
+              allMarkdownRemark(sort: {id: ASC}) {
                 edges {
                   node {
                     id
