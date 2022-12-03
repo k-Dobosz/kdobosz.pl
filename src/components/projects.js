@@ -119,7 +119,9 @@ const Projects = () => (
                 <h4>{ edge.node.frontmatter.name }</h4>
                 <Description>{ edge.node.excerpt }</Description>
                 <Buttons>
+                  {edge.node.frontmatter.demo_url != null ?
                   <ButtonDemo target="_blank" rel="noopener noreferrer" href={edge.node.frontmatter.demo_url}>View project</ButtonDemo>
+                  : ''}
                   <ButtonCode target="_blank" rel="noopener noreferrer" href={edge.node.frontmatter.code_url}>GitHub</ButtonCode>
                 </Buttons>
               </Project>
