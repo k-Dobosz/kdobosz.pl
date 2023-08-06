@@ -50,7 +50,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     {
-      resolve: `gatsby-plugin-scroll-reveal`,
+      resolve: `gatsby-plugin-scroll-reveal-with-new-react`,
       options: {
         threshold: 1,
         once: true,
