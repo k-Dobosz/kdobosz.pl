@@ -192,6 +192,13 @@ const Navbar = () => {
           >
             Contact
           </NavItem>
+          <MobileNavButton
+            onClick={() => setIsActive(!isActive)}
+            active={isActive}
+            aria-label="Mobile navigation button"
+          >
+            <NavButtonIcon />
+          </MobileNavButton>
         </Nav>
         <MobileNav active={isActive}>
           <MobileMenuItem
