@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import { Container } from './style'
@@ -9,7 +9,7 @@ const Navigation = styled.div`
   padding: 2.5rem;
   color: #fff;
   z-index: 3;
-  background-color: ${props => (props.active ? '#fff' : 'transparent')};
+  background-color: ${(props) => (props.active ? '#fff' : 'transparent')};
   transition: background-color 0.4s;
 
   @media (min-width: 800px) {
@@ -23,7 +23,7 @@ const ContainerRow = styled(Container)`
 
 const Logo = styled.h1`
   display: flex;
-  color: ${props =>
+  color: ${(props) =>
     props.active ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)'};
   font-size: 1.5rem;
   font-weight: 300;
@@ -112,13 +112,13 @@ const MobileNav = styled.div`
   left: 0;
   padding-bottom: 1.2rem;
   width: 100%;
-  background-color: ${props => (props.active ? '#ffffff' : 'transparent')};
-  z-index: ${props => (props.active ? 3 : 0)};
+  background-color: ${(props) => (props.active ? '#ffffff' : 'transparent')};
+  z-index: ${(props) => (props.active ? 3 : 0)};
   transition: 0.4s;
-  opacity: ${props => (props.active ? 1 : 0)};
+  opacity: ${(props) => (props.active ? 1 : 0)};
 
   ${MobileMenuItem} {
-    height: ${props => (props.active ? '3rem' : '0')};
+    height: ${(props) => (props.active ? '3rem' : '0')};
     transition: 0.4s;
   }
 
@@ -145,23 +145,23 @@ const MobileNavButton = styled.button`
   }
 
   ${NavButtonIcon} {
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.active ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.5)'};
-    transform: ${props => (props.active ? 'rotate(45deg)' : '')};
+    transform: ${(props) => (props.active ? 'rotate(45deg)' : '')};
     transition: 0.2s;
 
     &:before {
-      background-color: ${props =>
+      background-color: ${(props) =>
         props.active ? 'rgba(0, 0, 0, 0)' : 'rgba(255, 255, 255, 0.5)'};
-      transform: ${props => (props.active ? 'translateY(10px)' : '')};
+      transform: ${(props) => (props.active ? 'translateY(10px)' : '')};
       opacity: 1;
       transition: 0.2s;
     }
 
     &:after {
-      background-color: ${props =>
+      background-color: ${(props) =>
         props.active ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.5)'};
-      transform: ${props =>
+      transform: ${(props) =>
         props.active ? 'translateY(-10px) rotate(90deg)' : ''};
       transition: 0.2s;
     }
@@ -178,29 +178,29 @@ const Navbar = () => {
         <Nav>
           <NavItem
             onClick={() => {
-              scrollTo('#about-me')
+              scrollTo('#projects')
               setIsActive(!isActive)
             }}
           >
-            About me
+            Projects
           </NavItem>
-          <NavItem>Contact</NavItem>
-          <MobileNavButton
-            onClick={() => setIsActive(!isActive)}
-            active={isActive}
-            aria-label="Mobile navigation button"
+          <NavItem
+            onClick={() => {
+              scrollTo('#contact')
+              setIsActive(!isActive)
+            }}
           >
-            <NavButtonIcon />
-          </MobileNavButton>
+            Contact
+          </NavItem>
         </Nav>
         <MobileNav active={isActive}>
           <MobileMenuItem
             onClick={() => {
-              scrollTo('#about-me')
+              scrollTo('#projects')
               setIsActive(!isActive)
             }}
           >
-            About me
+            Projects
           </MobileMenuItem>
           <MobileMenuItem
             onClick={() => {

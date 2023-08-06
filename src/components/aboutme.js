@@ -35,7 +35,7 @@ const AboutMe = () => (
       </AboutMeHeader>
       <AboutMeContent data-sal="slide-up" data-sal-duration="1000">
         <p>
-        I'm a 20-year-old engineering student who focuses mostly on writing backend applications. But I'm not afraid to create both. I enjoy developing useful things and learning new things.
+        I'm a 21-year-old engineering student who focuses mostly on writing backend applications. But I'm not afraid to create both. I enjoy developing useful things and learning new things.
         </p>
       </AboutMeContent>
     </Container>

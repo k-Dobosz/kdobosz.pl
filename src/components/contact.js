@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import styled from 'styled-components'
 import { Container, Section, Separator } from './style'
 import { Linkedin, GitHub, Mail } from 'react-feather'
@@ -33,7 +33,7 @@ const Input = styled.input`
   padding: 1rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  
+
   &:focus {
     border: 2px solid black;
     background-color: #fff;
@@ -52,7 +52,7 @@ const Textarea = styled.textarea`
   padding: 1rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  
+
   &:focus {
     border: 2px solid black;
     background-color: #fff;
@@ -76,13 +76,13 @@ const Button = styled.button`
     width: 100px;
     height: 35px;
   }
-  
+
   &:hover {
     cursor: pointer;
     color: #000;
     background-color: #fff;
   }
-  
+
   @media (min-width: 800px) {
     font-size: 0.9rem;
     margin-right: 2rem;
@@ -113,13 +113,19 @@ const Link = styled((props) => <a {...props} />)`
   display: flex;
   flex-direction: row;
   width: max-content;
-  
-  &:link, &:visited {
+
+  &:link,
+  &:visited {
     text-decoration: none;
   }
 
   svg {
     margin-right: 0.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.4);
   }
 `
 
@@ -133,7 +139,7 @@ const Contact = () => {
         <Separator data-sal="slide-up" data-sal-duration="1000" />
         <ContactContent>
           <Info>
-            <p>You can reach me by this contact form and via: </p>
+            <p>You can reach me by contact form and via: </p>
             <Link
               target="_blank"
               rel="noopener noreferrer"
@@ -163,17 +169,19 @@ const Contact = () => {
             <input type="hidden" name="form-name" value="contact" />
             <Label data-sal="slide-up" data-sal-duration="1000">
               Name
-              <Input type="text" name="name" placeholder="Your name" required/>
+              <Input type="text" name="name" placeholder="Your name" required />
             </Label>
             <Label data-sal="slide-up" data-sal-duration="1000">
               Email
-              <Input type="email" name="email" placeholder="Email" required/>
+              <Input type="email" name="email" placeholder="Email" required />
             </Label>
             <Label data-sal="slide-up" data-sal-duration="1000">
               Message
-              <Textarea name="message" placeholder="Message" required/>
+              <Textarea name="message" placeholder="Message" required />
             </Label>
-            <Button type="submit" data-sal="slide-up" data-sal-duration="1000">Send</Button>
+            <Button type="submit" data-sal="slide-up" data-sal-duration="1000">
+              Send
+            </Button>
           </ContactForm>
         </ContactContent>
       </Container>

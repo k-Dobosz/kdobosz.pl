@@ -1,6 +1,5 @@
 ---
 name: Url shortener app
-demo_url: https://url-shortener-kdobosz.herokuapp.com
 code_url: https://github.com/k-Dobosz/url-shortener
 ---
 
